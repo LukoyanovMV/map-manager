@@ -1,0 +1,95 @@
+@main-color: rgb(46,109,164);
+@underline-color: #d5d5d5;
+@underline-focus-color: @main-color;
+@font-color: #555;
+
+.forms {
+  input, textarea, select, button, label {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .text-input {
+    position: relative;
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      height: 1px;
+      background-color: @underline-color;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      transition: all 0.2s;
+    }
+
+    label + input[type=text] {
+      padding: 8px 0 8px 0;
+    }
+
+    .focus-indicator {
+      display: block;
+      position: relative;
+      height: 2px;
+      background-color: @main-color;
+      bottom: 0;
+      z-index: 2;
+      width: 0;
+      margin: 0 auto;
+      transition: all 0.2s;
+    }
+    input:focus + .focus-indicator {
+      width: 100%;
+    }
+
+    &.inline-label {
+      label {
+        float: left;
+      }
+    }
+  }
+
+  label {
+    color: @main-color;
+  }
+
+  .text-input input[type=text] {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 16px 0 8px 0;
+    width: 100%;
+    box-sizing: border-box;
+    color: @font-color;
+    vertical-align: middle;
+    border-bottom: solid 2px transparent;
+
+    &.input-sm {
+      padding: 8px 0 4px 0;
+      font-size: 12px;
+    }
+  }
+
+  button {
+    color: #fff;
+    background-color: @main-color;
+    border: none;
+    outline: none;
+    line-height: 36px;
+    text-align: center;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    width: 100%;
+    margin-top: 16px;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+
+    &:hover {
+      background-color: #286090;
+    }
+  }
+}

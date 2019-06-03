@@ -1,0 +1,39 @@
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+
+    a, span {
+      display: inline-block;
+      padding: 3px 4px;
+      line-height: 28px;
+      margin: 8px 2px;
+      border-radius: 3px;
+      color: #eeeeee;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #eeeeee;
+        color: #07406a;
+        cursor: pointer;
+      }
+    }
+
+    &:after {
+      content: " ";
+      display: inline-block;
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATElEQVQ4jWNgGJTg////cf///3/4////KnINuPsfAZrIMaD4PypoJMeQGjRDGgaNIa7I8kwkm0ih7Q1000xZNFIjIcVCk3IlyZrpDgDoL7gePt39HAAAAABJRU5ErkJggg==') no-repeat center;
+      width: 16px;
+      height: 18px;
+      vertical-align: middle;
+    }
+  }
+
+  & li:last-child:after {
+    display: none;
+  }
+
+}
+

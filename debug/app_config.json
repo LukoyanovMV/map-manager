@@ -1,0 +1,12 @@
+{
+    "baseUrl": "//lmv.orbismap.com/",
+    "apiUrl": "//lmv.orbismap.com/api/2.4/oms_dev/",
+    "modules": [
+        {
+            "url": "users/index.js"
+        },
+        {
+            "url": "containerEditor/index.js"
+        }
+    ]
+}
